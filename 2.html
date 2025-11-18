@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIFTYGRAPHY - Premium Design Portfolio</title>
+    <meta name="description" content="Professional graphic design services including logo design, social media graphics, banners, and more by NIFTYGRAPHY">
+    <meta name="keywords" content="graphic design, logo design, social media design, Sri Lanka">
+    <meta name="author" content="NIFTYGRAPHY">
+    
+    <!-- Theme Color for Mobile Browsers -->
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.niftygraphy.com/">
+    <meta property="og:title" content="NIFTYGRAPHY - Premium Design Portfolio">
+    <meta property="og:description" content="Professional graphic design services including logo design, social media graphics, banners, and more">
+    <meta property="og:image" content="https://www.niftygraphy.com/Profile.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.niftygraphy.com/">
+    <meta property="twitter:title" content="NIFTYGRAPHY - Premium Design Portfolio">
+    <meta property="twitter:description" content="Professional graphic design services including logo design, social media graphics, banners, and more">
+    <meta property="twitter:image" content="https://www.niftygraphy.com/Profile.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "NIFTYGRAPHY",
+      "url": "https://www.niftygraphy.com",
+      "logo": "https://www.niftygraphy.com/logo.png",
+      "description": "Professional graphic design services",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Sri Lanka"
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61555615503916&mibextid=ZbWKwL",
+        "https://www.youtube.com/channel/UC4dF_2XAfT7KopBimOfy-QQ",
+        "https://www.instagram.com/nifty__graphy/profilecard/?igsh=MW5mczM4cmg5dTBqZw==",
+        "https://whatsapp.com/channel/0029VanZieE8KMqhmpZM3t3i",
+        "https://www.tiktok.com/@niftygraphy?is_from_webapp=1&sender_device=pc",
+        "https://www.niftygraphy.com"
+      ]
+    }
+    </script>
+    
+    <style>
+    /* CSS Variables for Theme */
+    :root {
+      /* Dark Theme (Default) */
+      --bg-primary: #121212;
+      --bg-secondary: #1e1e1e;
+      --bg-tertiary: #2d2d2d;
+      --text-primary: #ffffff;
+      --text-secondary: #b0b0b0;
+      --accent-color: #6a5acd;
+      --accent-hover: #7b68ee;
+      --border-color: #333333;
+      --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      --header-bg: rgba(18, 18, 18, 0.9);
+    }
+
+    [data-theme="light"] {
+      --bg-primary: #ffffff;
+      --bg-secondary: #f5f5f5;
+      --bg-tertiary: #e9e9e9;
+      --text-primary: #121212;
+      --text-secondary: #555555;
+      --accent-color: #6a5acd;
+      --accent-hover: #7b68ee;
+      --border-color: #dddddd;
+      --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      --header-bg: rgba(255, 255, 255, 0.9);
+    }
+
+    /* Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Animated Background */
+    .animated-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .gradient-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(-45deg, var(--bg-secondary), var(--bg-primary), var(--bg-tertiary), var(--bg-secondary));
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .particles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Skip to main content for accessibility */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--accent-color);
+      color: white;
+      padding: 8px;
+      z-index: 1000;
+      text-decoration: none;
+      border-radius: 0 0 4px 0;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* Header Styles */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      background-color: var(--header-bg);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    header.scrolled {
+      padding: 0.7rem 2rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      height: 40px;
+    }
+
+    .logo.visible {
+      opacity: 1;
+    }
+
+    .logo img {
+      height: 100%;
+      width: auto;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      padding: 0.5rem 0;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent-color);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .theme-toggle {
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      cursor: pointer;
+      font-size: 1.2rem;
+      padding: 0.5rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      background-color: var(--bg-tertiary);
+      transform: rotate(15deg);
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 2rem;
+      border: 4px solid var(--accent-color);
+      box-shadow: 0 0 30px rgba(106, 90, 205, 0.5);
+      transition: transform 0.5s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      border-right: 2px solid var(--accent-color);
+      white-space: nowrap;
+      animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: var(--accent-color) }
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+
+    .scroll-down {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--text-primary);
+      font-size: 2rem;
+      cursor: pointer;
+      animation: bounce 2s infinite;
+      transition: color 0.3s ease;
+    }
+
+    .scroll-down:hover {
+      color: var(--accent-color);
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+      }
+      40% {
+        transform: translateY(-10px) translateX(-50%);
+      }
+      60% {
+        transform: translateY(-5px) translateX(-50%);
+      }
+    }
+
+    /* Section Styles */
+    section {
+      padding: 5rem 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background-color: var(--accent-color);
+      border-radius: 2px;
+    }
+
+    /* Portfolio Section */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .portfolio-card {
+      background-color: var(--bg-secondary);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .portfolio-card:hover .card-img {
+      transform: scale(1.05);
+    }
+
+    .card-content {
+      padding: 1.5rem;
+    }
+
+    .card-title {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .card-description {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .card-btn {
+      display: inline-block;
+      background-color: var(--accent-color);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      text-align: center;
+    }
+
+    .card-btn:hover {
+      background-color: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(106, 90, 205, 0.4);
+    }
+
+    /* Price Section */
+    .accordion {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .accordion-item {
+      background-color: var(--bg-secondary);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+    }
+
+    .accordion-header {
+      padding: 1.5rem;
+      background-color: var(--bg-tertiary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .accordion-header:hover {
+      background-color: var(--accent-color);
+    }
+
+    .accordion-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .accordion-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-item.active .accordion-icon {
+      transform: rotate(180deg);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .accordion-item.active .accordion-content {
+      max-height: 500px;
+    }
+
+    .price-list {
+      padding: 1.5rem;
+    }
+
+    .price-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .price-item:last-child {
+      border-bottom: none;
+    }
+
+    .price-name {
+      color: var(--text-primary);
+    }
+
+    .price-value {
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+
+    /* About Section */
+    .about-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      .about-content {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .skills-section h3, .engineering-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--accent-color);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .skill-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem;
+      background-color: var(--bg-tertiary);
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .skill-icon {
+      font-size: 1.5rem;
+    }
+
+    .engineering-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .engineering-item {
+      padding: 1rem;
+      background-color: var(--bg-tertiary);
+      border-radius: 5px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .engineering-item:hover {
+      background-color: var(--accent-color);
+      color: white;
+      transform: scale(1.05);
+    }
+
+    .cv-btn {
+      display: inline-block;
+      background-color: var(--accent-color);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+    }
+
+    .cv-btn:hover {
+      background-color: var(--accent-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(106, 90, 205, 0.3);
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: var(--bg-tertiary);
+      color: var(--text-primary);
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background-color: var(--accent-color);
+      color: white;
+      transform: translateY(-5px);
+    }
+
+    /* Social Media Icons */
+    .social-icon {
+      width: 24px;
+      height: 24px;
+      filter: invert(1);
+      transition: all 0.3s ease;
+    }
+
+    [data-theme="light"] .social-icon {
+      filter: invert(0);
+    }
+
+    .social-link:hover .social-icon {
+      transform: scale(1.2);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--bg-secondary);
+      padding: 2rem;
+      text-align: center;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .copyright {
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+    }
+
+    .legal {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+
+    /* Floating Action Buttons */
+    .floating-btns {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      z-index: 1000;
+    }
+
+    .whatsapp-btn, .scroll-top {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--accent-color);
+      color: white;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+    }
+
+    .whatsapp-btn:hover, .scroll-top:hover {
+      background-color: var(--accent-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .whatsapp-btn {
+      animation: pulse 2s infinite;
+      background-color: #25D366;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+
+    .scroll-top {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .scroll-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Reduced Motion Support */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    </style>
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-bg"></div>
+        <canvas class="particles" id="particles-canvas"></canvas>
+    </div>
+    
+    <!-- Header -->
+    <header id="header">
+        <div class="logo" id="logo">
+            <!-- Replace with your actual logo -->
+            <img src="logo.png" alt="NIFTYGRAPHY Logo">
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#portfolio">Examples</a></li>
+                <li><a href="#pricing">Price</a></li>
+                <li><a href="#about">About me</a></li>
+            </ul>
+        </nav>
+        
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+            <span id="theme-icon">🌙</span>
+        </button>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <!-- Replace with your actual profile image -->
+            <img src="Profile.png" alt="NIFTYGRAPHY Profile" class="profile-img">
+            <h1>Welcome To NIFTYGRAPHY 👸💙</h1>
+            <p>BELIVE MY GRAPHIC WITH YOUR IDEAS 👸💙.</p>
+            <div class="scroll-down" id="scroll-down">
+                ↓
+            </div>
+        </section>
+        
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio">
+            <h2 class="section-title">Portfolio Examples</h2>
+            <div class="portfolio-grid" id="portfolio-grid">
+                <!-- Portfolio items will be dynamically inserted here -->
+            </div>
+        </section>
+        
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing">
+            <h2 class="section-title">Service Pricing</h2>
+            <div class="accordion" id="accordion">
+                <!-- Accordion items will be dynamically inserted here -->
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="skills-section">
+                    <h3>Design Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <span class="skill-icon">🖌️</span>
+                            <span>Adobe Photoshop</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">✏️</span>
+                            <span>Adobe Illustrator</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">🎵</span>
+                            <span>Adobe Audition</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">📐</span>
+                            <span>CorelDraw</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://www.niftygraphy.com" class="cv-btn" target="_blank" rel="noopener noreferrer">View Full CV</a>
+                </div>
+                
+                <div class="engineering-section">
+                    <h3>Computer IT Engineering</h3>
+                    <div class="engineering-grid">
+                        <div class="engineering-item">Web Design</div>
+                        <div class="engineering-item">Networking</div>
+                        <div class="engineering-item">Operating Systems</div>
+                        <div class="engineering-item">Hardware</div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61555615503916&mibextid=ZbWKwL" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UC4dF_2XAfT7KopBimOfy-QQ" class="social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/nifty__graphy/profilecard/?igsh=MW5mczM4cmg5dTBqZw==" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@niftygraphy?is_from_webapp=1&sender_device=pc" class="social-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+                            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                            </svg>
+                        </a>
+                        <a href="https://whatsapp.com/channel/0029VanZieE8KMqhmpZM3t3i" class="social-link" aria-label="WhatsApp Channel" target="_blank" rel="noopener noreferrer">
+                            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893c0-3.18-1.24-6.171-3.495-8.428"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <p class="copyright">Design by: NIFTYGRAPHY | 2025 | Sri Lanka.</p>
+        <p class="legal">All rights reserved. Unauthorized use prohibited.</p>
+    </footer>
+    
+    <!-- Floating Action Buttons -->
+    <div class="floating-btns">
+        <a href="https://wa.me/94759700219?text=Hello%20NIFTYGRAPHY%2C%20I%20would%20like%20to%20inquire%20about%20your%20design%20services" class="whatsapp-btn" id="whatsapp-btn" aria-label="Contact on WhatsApp" target="_blank" rel="noopener noreferrer">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893c0-3.18-1.24-6.171-3.495-8.428"/>
+            </svg>
+        </a>
+        <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+            ↑
+        </button>
+    </div>
+
+    <script>
+    // Portfolio Data
+    const portfolioItems = [
+        {
+            title: "Logo Design",
+            description: "Creative and professional logo designs that represent your brand identity with unique concepts and modern aesthetics.",
+            link: "https://sites.google.com/view/niftygraphy/logo-design",
+            image: "Logo Design.jpg"
+        },
+        {
+            title: "Social Media Cover Image",
+            description: "Eye-catching cover images for all social media platforms that make your profile stand out and attract more followers.",
+            link: "https://sites.google.com/view/niftygraphy/social-media-cover-image",
+            image: "Social Media Cover Image.jpg"
+        },
+        {
+            title: "Social Media Post Design",
+            description: "Engaging social media posts designed to increase interaction and visibility for your brand across all platforms.",
+            link: "https://sites.google.com/view/niftygraphy/social-media-post-design",
+            image: "Social Media Post Design.jpg"
+        },
+        {
+            title: "Leaflet Design",
+            description: "Professional leaflet designs that effectively communicate your message and attract potential customers.",
+            link: "https://sites.google.com/view/niftygraphy/leaflet-design",
+            image: "Leaflet Design.jpg"
+        },
+        {
+            title: "Banner Design",
+            description: "Attention-grabbing banner designs for websites and events that drive engagement and conversions.",
+            link: "https://sites.google.com/view/niftygraphy/banner-design",
+            image: "Banner Design.jpg"
+        },
+        {
+            title: "YouTube Thumbnail Design",
+            description: "Compelling YouTube thumbnails that increase click-through rates and help your videos stand out.",
+            link: "https://sites.google.com/view/niftygraphy/youtube-thumbnail-design",
+            image: "thammail design 29.jpg"
+        },
+        {
+            title: "Package Design",
+            description: "Innovative package designs that enhance product appeal and create memorable unboxing experiences.",
+            link: "https://sites.google.com/view/niftygraphy/package",
+            image: "Package Design.jpg"
+        },
+        {
+            title: "Tute Cover Design",
+            description: "Professional tutorial cover designs that make educational materials visually appealing and engaging.",
+            link: "https://sites.google.com/view/niftygraphy/tute%20cover%20design",
+            image: "tute cover design.jpg"
+        },
+        {
+            title: "T-Shirt Design",
+            description: "Creative T-shirt designs that reflect personality and style, perfect for branding or personal use.",
+            link: "https://sites.google.com/view/niftygraphy/T-Shirt%20design",
+            image: "T-Shirt design.jpg"
+        }
+    ];
+
+    // Pricing Data
+    const pricingItems = [
+        {
+            title: "Logo Design",
+            prices: [
+                { name: "2 Color Normal", value: "Rs 1500/=" },
+                { name: "Full Color Co. Brand", value: "Rs 2500 — Rs 3000/=" },
+                { name: "with Ai, PSD full file", value: "Rs 1500/- (before charge)" }
+            ]
+        },
+        {
+            title: "Social Media Post Design",
+            prices: [
+                { name: "2 Color Normal", value: "Rs 800/=" },
+                { name: "Full Color All in One", value: "Rs 1200/=" },
+                { name: "with Ai, PSD full file", value: "Rs 300/= (before charge)" }
+            ]
+        },
+        {
+            title: "Banner Design",
+            prices: [
+                { name: "4 Color Quality", value: "Rs 1000/=" },
+                { name: "High Quality", value: "Rs 1200/=" },
+                { name: "with Ai, PSD full file", value: "Rs 200/ (pre of Charge)" }
+            ]
+        },
+        {
+            title: "Social Media Cover Photo",
+            prices: [
+                { name: "2 Color Normal", value: "Rs 800/-" },
+                { name: "Full Color High Quality", value: "Rs 1200/" },
+                { name: "with Ai, PSD full file", value: "Rs 100/- (pre of Charge)" }
+            ]
+        },
+        {
+            title: "T-Shirt Design",
+            prices: [
+                { name: "2 Color Normal", value: "Rs 1000/-" },
+                { name: "Full Color High Quality", value: "Rs 1200/-" }
+            ]
+        },
+        {
+            title: "Package Design",
+            prices: [
+                { name: "2 Color Normal", value: "Rs 1000/=" },
+                { name: "Full Color High Quality", value: "Rs 1200/" },
+                { name: "with Ai, PSD full file", value: "Rs 300/= (before charge)" }
+            ]
+        },
+        {
+            title: "Tute Cover Design",
+            prices: [
+                { name: "2 Color Normal", value: "Rs 800/=" },
+                { name: "Full Color High Quality", value: "Rs 1000/" },
+                { name: "with Ai, PSD full file", value: "Rs 300/= (before charge)" }
+            ]
+        }
+    ];
+
+    // DOM Elements
+    const header = document.getElementById('header');
+    const logo = document.getElementById('logo');
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const scrollDown = document.getElementById('scroll-down');
+    const portfolioGrid = document.getElementById('portfolio-grid');
+    const accordion = document.getElementById('accordion');
+    const scrollTop = document.getElementById('scroll-top');
+
+    // Initialize the page
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize theme
+        initTheme();
+        
+        // Initialize portfolio grid
+        initPortfolio();
+        
+        // Initialize pricing accordion
+        initPricing();
+        
+        // Initialize particles animation
+        initParticles();
+        
+        // Initialize scroll events
+        initScrollEvents();
+        
+        // Initialize event listeners
+        initEventListeners();
+    });
+
+    // Theme Management
+    function initTheme() {
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        setTheme(savedTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        });
+    }
+
+    function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        themeIcon.textContent = theme === 'dark' ? '🌙' : '☀️';
+        localStorage.setItem('theme', theme);
+    }
+
+    // Portfolio Grid
+    function initPortfolio() {
+        portfolioItems.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'portfolio-card';
+            card.innerHTML = `
+                <img src="${item.image}" alt="${item.title}" class="card-img" loading="lazy">
+                <div class="card-content">
+                    <h3 class="card-title">${item.title}</h3>
+                    <p class="card-description">${item.description}</p>
+                    <a href="${item.link}" class="card-btn" target="_blank" rel="noopener noreferrer">Get Now</a>
+                </div>
+            `;
+            portfolioGrid.appendChild(card);
+        });
+    }
+
+    // Pricing Accordion
+    function initPricing() {
+        pricingItems.forEach((item, index) => {
+            const accordionItem = document.createElement('div');
+            accordionItem.className = 'accordion-item';
+            accordionItem.innerHTML = `
+                <div class="accordion-header">
+                    <h3 class="accordion-title">${item.title}</h3>
+                    <span class="accordion-icon">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="price-list">
+                        ${item.prices.map(price => `
+                            <div class="price-item">
+                                <span class="price-name">${price.name}</span>
+                                <span class="price-value">${price.value}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+            accordion.appendChild(accordionItem);
+            
+            // Add click event to accordion header
+            const header = accordionItem.querySelector('.accordion-header');
+            header.addEventListener('click', () => {
+                const isActive = accordionItem.classList.contains('active');
+                
+                // Close all accordion items
+                document.querySelectorAll('.accordion-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    accordionItem.classList.add('active');
+                }
+            });
+        });
+    }
+
+    // Particles Animation
+    function initParticles() {
+        const canvas = document.getElementById('particles-canvas');
+        const ctx = canvas.getContext('2d');
+        
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+        
+        const particles = [];
+        const particleCount = 50;
+        
+        // Create particles
+        for (let i = 0; i < particleCount; i++) {
+            particles.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                size: Math.random() * 2 + 1,
+                speedX: Math.random() * 0.5 - 0.25,
+                speedY: Math.random() * 0.5 - 0.25,
+                opacity: Math.random() * 0.5 + 0.2
+            });
+        }
+        
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Get current theme color for particles
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const particleColor = isDark ? '255, 255, 255' : '0, 0, 0';
+            
+            particles.forEach(particle => {
+                // Update position
+                particle.x += particle.speedX;
+                particle.y += particle.speedY;
+                
+                // Wrap around edges
+                if (particle.x < 0) particle.x = canvas.width;
+                if (particle.x > canvas.width) particle.x = 0;
+                if (particle.y < 0) particle.y = canvas.height;
+                if (particle.y > canvas.height) particle.y = 0;
+                
+                // Draw particle
+                ctx.beginPath();
+                ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${particleColor}, ${particle.opacity})`;
+                ctx.fill();
+            });
+            
+            requestAnimationFrame(animateParticles);
+        }
+        
+        animateParticles();
+    }
+
+    // Scroll Events
+    function initScrollEvents() {
+        window.addEventListener('scroll', () => {
+            // Show/hide header logo on scroll
+            if (window.scrollY > 80) {
+                header.classList.add('scrolled');
+                logo.classList.add('visible');
+            } else {
+                header.classList.remove('scrolled');
+                logo.classList.remove('visible');
+            }
+            
+            // Show/hide scroll to top button
+            if (window.scrollY > 500) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
+    }
+
+    // Event Listeners
+    function initEventListeners() {
+        // Scroll down button
+        scrollDown.addEventListener('click', () => {
+            document.getElementById('portfolio').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        });
+        
+        // Scroll to top button
+        scrollTop.addEventListener('click', () => {
+            window.scrollTo({ 
+                top: 0, 
+                behavior: 'smooth' 
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({ 
+                    behavior: 'smooth' 
+                });
+            });
+        });
+    }
+    </script>
+</body>
+</html>
